@@ -1,0 +1,9 @@
+
+<div *ngFor = 'let todo of todos ; let i = index' >
+<span *ngIf = 'displayTodo'>{{i+1}} : {{todo}}</span> &nbsp; &nbsp; &nbsp;
+<button (click)="showOptions(i)" *ngIf = 'showOptions(i)'>edit todo</button>
+<button (click)="showOptions(i)" *ngIf = 'showOptions(i)'>update</button>
+<button (click)="showOptions(i)" *ngIf = 'showOptions(i)'>delete</button>
+</div>
+<button (click)="showTodo()">show todos</button>
+

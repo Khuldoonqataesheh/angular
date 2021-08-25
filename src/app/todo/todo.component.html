@@ -1,0 +1,10 @@
+
+<div *ngFor = 'let todo of todos ; let i = index' >
+    <span >{{i+1}} : {{todo}}</span> &nbsp; &nbsp; &nbsp;
+    <button (click)="removeTodo(i)" >remove</button>
+    <input type="text" [(ngModel)]="newTodo">
+    <button (click)="updateTodo(i,newTodo)" >update todo</button>
+    <button (click)="addTodo(newTodo)" >update todo</button>
+</div>
+<input type="text" [(ngModel)]="addingTodo">
+<button (click)="addTodo(addingTodo)" >add todo</button>
